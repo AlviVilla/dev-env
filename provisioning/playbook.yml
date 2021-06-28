@@ -1,0 +1,15 @@
+---
+  - name: Alvi Villa local development environment
+    hosts: all
+    become: yes
+
+    roles:
+    - role: geerlingguy.git
+    - role: geerlingguy.docker
+
+    vars:
+      git_additional_packages:
+        - "{% if ansible_os_family == 'FreeBSD' %}gitflow{% elif ansible_os_family == 'OpenBSD' %}git-cvs{% elif ansible_os_family == 'RedHat' %}git-cvs{% else %}git-flow{% endif %}"
+
+    tasks:
+      - import_tasks: docker.yml
