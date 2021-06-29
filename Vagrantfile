@@ -71,7 +71,7 @@ Vagrant.configure("2") do |config|
   end
 
   # Install python, SSH, repositories
-  config.vm.provision :shell, :path => "provisioning/libs.sh"
-  config.vm.provision :shell, :path => "provisioning/download-modules.sh", privileged: false, :args => [ENV["VAGRANT_NAME"], ENV["VAGRANT_EMAIL"]]
+  config.vm.provision :shell, :path => "provisioning/lib.sh"
+  config.vm.provision :shell, :path => "provisioning/download-modules.sh", privileged: false, :args => ["AlviVilla", "a.villa6@hotmail.com"]
 
 end
