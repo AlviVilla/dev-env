@@ -73,5 +73,6 @@ Vagrant.configure("2") do |config|
   # Install python, SSH, repositories
   config.vm.provision :shell, :path => "provisioning/lib.sh"
   config.vm.provision :shell, :path => "provisioning/download-modules.sh", privileged: false, :args => ["AlviVilla", "a.villa6@hotmail.com"]
+  config.vm.provision :shell, :path => "provisioning/setupMinikube.sh"
 
 end

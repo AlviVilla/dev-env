@@ -11,7 +11,7 @@ rm /home/vagrant/githubKey
 # INSERT THE REPOSITORIES IN A LIST (separated by a single space) HERE:
 TEMPLATES=""
 LIBRARIES="" 
-SERVICES="er_storage_manager er_user_interface"
+SERVICES="er_storage_manager er_user_interface dev-env"
 BUILDING_BLOCKS=""
 REPOS="$TEMPLATES $LIBRARIES $SERVICES $BUILDING_BLOCKS"
 for i in $REPOS;
