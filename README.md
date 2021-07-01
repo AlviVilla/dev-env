@@ -36,8 +36,6 @@ In an effort to have the entire development team aligned, VSCode is proposed alo
     * export VAGRANT_EMAIL='your-github-email'
     * export VAGRANT_NAME='yourname'
 
-8. Initiate EOEPCA development environment: "vagrant up"
-
 ## Usage
 To access the environment:
 * If you want a SSH connection, use "vagrant ssh" (either on VSCode or on your prefered terminal, from this repo's folder).
