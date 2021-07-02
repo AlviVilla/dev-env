@@ -51,6 +51,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision "file", source: "secure/id_rsa", destination: "/home/vagrant/.ssh/id_rsa"
   # SSH print of github, checked manually. Used to automate the process of downloading the repositories
   config.vm.provision "file", source: "provisioning/githubKey", destination: "/home/vagrant/githubKey"
+  config.vm.provision "file", source: "provisioning/setupMinikube.sh", destination: "/home/vagrant/setupMinikube.sh"
+
 
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -73,6 +75,5 @@ Vagrant.configure("2") do |config|
   # Install python, SSH, repositories
   config.vm.provision :shell, :path => "provisioning/lib.sh"
   config.vm.provision :shell, :path => "provisioning/download-modules.sh", privileged: false, :args => ["AlviVilla", "a.villa6@hotmail.com"]
-  config.vm.provision :shell, :path => "provisioning/setupMinikube.sh"
 
 end
